@@ -8,7 +8,25 @@
   </head>
   <body>
     <div class="container">
-      
+      <header class='d-flex justify-content-between my-4'>
+        <h1>Book list</h1>
+        <div>
+          <a href="#" class='btn btn-primary' data-source='components/AddBook.php'>Add Book</a>
+        </div>
+      </header>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $('a').click(function() {
+          let source = $(this).data("source");
+
+          $(".container").load(source);
+          
+          return false; // prevent default browser refresh on "#" link
+        });
+      });
+    </script>
   </body>
 </html>
