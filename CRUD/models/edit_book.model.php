@@ -10,6 +10,6 @@ function edit(object $pdo, string $title, string $author, string $type, string $
   $stmt->bindParam(':author', $author);
   $stmt->bindParam(':Book_type', $type);
   $stmt->bindParam(':book_desc', $desc);
-  $stmt->bindParam('id', $id);
+  $stmt->bindParam(':id', $id);
   $stmt->execute();
 }

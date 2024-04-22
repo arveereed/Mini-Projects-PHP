@@ -49,7 +49,7 @@
                 <td>
                   <a href='' class='btn btn-info' data-source='components/BookDetails.php?id=". $row['Book_ID'] ."'>Read more</a>
                   <a href='' class='btn btn-warning' data-source='components/EditBook.php?id=". $row['Book_ID'] ."'>Edit</a>
-                  <a href='' class='btn btn-danger'>Delete</a>
+                  <a href='' class='btn btn-danger' data-source='components/Delete.php?id=". $row['Book_ID'] ."'>Delete</a>
                 </td>
               </tr>
               ";
