@@ -9,14 +9,9 @@
   <?php
   if (isset($_GET['id'])) {
     require_once '../inc/dbh.inc.php';
+    require_once '../models/renderbook.php';
 
-    $query = 'SELECT * FROM tbl_books WHERE Book_ID = :Book_ID';
-    $stmt = $pdo->prepare($query);
-
-    $stmt->bindParam(':Book_ID', $_GET['id']);
-    $stmt->execute();
-
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    $row = get_row($pdo);
   } 
   ?>
   <h2>Title</h2>

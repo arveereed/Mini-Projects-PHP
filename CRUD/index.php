@@ -34,7 +34,7 @@
         <tbody>
           <?php
           require_once 'inc/dbh.inc.php';
-          require_once 'models/renderbook.inc.php';
+          require_once 'models/renderbook.php';
           
           $stmt = get_data($pdo);
 
@@ -48,7 +48,7 @@
                 <td>" .$row['Book_Type'] . "</td>
                 <td>
                   <a href='' class='btn btn-info' data-source='components/BookDetails.php?id=". $row['Book_ID'] ."'>Read more</a>
-                  <a href='' class='btn btn-warning'>Edit</a>
+                  <a href='' class='btn btn-warning' data-source='components/EditBook.php?id=". $row['Book_ID'] ."'>Edit</a>
                   <a href='' class='btn btn-danger'>Delete</a>
                 </td>
               </tr>
